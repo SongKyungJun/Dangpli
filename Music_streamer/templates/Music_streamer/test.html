@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Palsekjo - Emotion Rc page</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="static/assets/css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">이 노래가 마음에 드셨군요!</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">이용해주셔서 감사합니다.</p>
+                    <div class="card-footer p-4 pt-0 border-top-0">
+                        <div class="text-center"><a class="btn btn-outline-light mt-auto" href="{% url 'start_rc' %}">다시 얼굴 인식하러 가기</a></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

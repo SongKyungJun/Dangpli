@@ -1,0 +1,44 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Icons {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <!-- <div class="card-header">
+        <h5 class="title">100 Awesome Nucleo Icons</h5>
+        <p class="category">Handcrafted by our friends from <a href="https://nucleoapp.com/?ref=1712">NucleoApp</a></p>
+      </div> -->
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">당신의 표정을 읽는 중입니다..</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">사소한 변화조차 감지됩니다!</p>
+                        <div class="card-footer p-4 pt-0 border-top-0">
+                            <div class="text-center"><a class="btn btn-outline-light mt-auto" href="{% url 'stream' %}">얼굴 인식 시작하기</a></div>
+                        </div>
+                </div>
+            </div>
+        {% block body %}
+            <table>
+                <tr>
+                    <div style="text-align : center;">
+                    <img src="http://127.0.0.1:8000/detectme" style="width: 480px; height: 240px; left: 0px; top: 0px;" />
+                    </div>
+                </tr>
+            </table>
+        {% endblock %}
+        <section class="py-5">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

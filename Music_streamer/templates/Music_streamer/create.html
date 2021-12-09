@@ -1,0 +1,72 @@
+
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+{% csrf_token %}
+<html lang="en">
+<body>
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">마음에 드시는 음악을 찾지 못해서 죄송합니다</h1>
+            <p class="lead fw-normal text-white-50 mb-0">당신의 노래와 이 노래를 듣고 느끼는 기분을 체크해주세요
+                        <br>저희 프로젝트의 큰 힘이 됩니다!!</p>
+                <form action = "{% url 'create' %}">
+                    <br>
+                    <br>
+<!--                    <div class="card-footer p-4 pt-0 border-top-0">-->
+                    노래:<input type="text" name="song">
+                    <br>
+                    <br>
+<!--                    emotion:<input type="text" name="emotion">-->
+                    <input TYPE=CHECKBOX NAME=emotion VALUE="angry"> angry
+
+                    <input TYPE=CHECKBOX NAME=emotion VALUE="disgust"> disgust
+
+                    <input TYPE=CHECKBOX NAME=emotion VALUE="fear"> fear
+
+                    <input TYPE=CHECKBOX NAME=emotion VALUE="neutral"> neutral
+
+                    <input TYPE=CHECKBOX NAME=emotion VALUE="happy"> happy
+
+                    <input TYPE=CHECKBOX NAME=emotion VALUE="sad"> sad
+
+                    <input TYPE=CHECKBOX NAME=emotion VALUE="surprise"> surprise
+
+<!--                    ('angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral')-->
+                    <br>
+                    <br>
+                    <div class="text-center"><input class="btn btn-outline-light mt-auto"  type="submit" value="저장하기"></div>
+<!--                        <input type="submit" value="제출"></div>-->
+<!--                    </div>-->
+                </form>
+                <img class="card-img-top" src="static/assets/img/palsekjo.png" alt="..." />
+            </div>
+    </div>
+</body>
+</html>
+
+<!--            <div class="container px-4 px-lg-5 my-5">-->
+<!--                <div class="text-center text-white">-->
+<!--                    <h1 class="display-4 fw-bolder">당신의 표정을 읽는 중입니다..</h1>-->
+<!--                    <p class="lead fw-normal text-white-50 mb-0">사소한 변화조차 감지됩니다!</p>-->
+<!--                        <div class="card-footer p-4 pt-0 border-top-0">-->
+<!--                            <div class="text-center"><a class="btn btn-outline-light mt-auto" href="{% url 'stream' %}">얼굴 인식 시작하기</a></div>-->
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initDashboardPageCharts();
+
+    });
+  </script>
+
+{% endblock javascripts %}
